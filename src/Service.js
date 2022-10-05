@@ -1,5 +1,5 @@
 import React from "react";
-import {Sdata} from "react-dom";
+import Sdata from "./Sdata";
 import Card from "./Card";
 
 const Service = () => {
@@ -12,14 +12,15 @@ return(
    <div className="row">
    <div className="col-10 mx-auto">
    <div className="row gy-4">
-   
-{
-  Sdata.map((val,ind) =>{
-   return <Card key={ind} imgsrc={val.imgsrc} title={val.title} />
-   })
-       }
 
-                  
+ {
+   Sdata.map((val,ind ) => {
+    return <Card key={ind} 
+    imgsrc={val.imgsrc} 
+    title={val.title} />
+   })
+       } 
+
    </div>
    </div>
    </div>
